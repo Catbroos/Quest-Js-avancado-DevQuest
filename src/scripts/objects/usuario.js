@@ -7,6 +7,7 @@ const usuario = {
     seguidores: '',
     seguindo: '',
     repositorios: [],
+    eventos: [],
     PrencherUsuario(usuarioInfo) {
         this.foto = usuarioInfo.avatar_url;
         this.nome = usuarioInfo.name;
@@ -19,6 +20,9 @@ const usuario = {
     PrencherRepositorios(repositoriesInfo) {
         this.repositorios = repositoriesInfo;
     },
+    PrencherEventos(eventosInfo) {
+        this.eventos = eventosInfo;
+    }
 }
 
-export {usuario}
+export { usuario }
