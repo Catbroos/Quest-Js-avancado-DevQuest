@@ -1,4 +1,3 @@
-console.log("usuario iniciado")
 import { PegarInformacoes } from "./Informacoes.js";
 import { PegarRepositorios } from "./Repositorios.js";
 
@@ -6,7 +5,6 @@ import { usuario } from "../objects/usuario.js";
 import { screen } from "../objects/screen.js";
 
 async function Usuario() {
-    console.log("função usuario iniciado")
     let nomeUsuario = document.getElementById("input-search").value;
     let usuarioInfo = await PegarInformacoes(nomeUsuario);
     if (usuarioInfo.message === "Not Found") {

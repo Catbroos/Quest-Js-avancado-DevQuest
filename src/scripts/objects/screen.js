@@ -1,16 +1,17 @@
 const screen = {
     userPorfile: document.querySelector(".profile-data"),
     RenderUser(user) {
-        console.log("render user iniciado")
         this.userPorfile.innerHTML += `<div class="info">
                                                                 <img src="${user.foto}" alt="Imagem de perfil do usuário.">
                                                                 <div class="data">
-                                                                    <h1>${user.nome ?? "informação não existente"}</h1>
-                                                                    <p>${user.bio ?? "informação não existente"}</p>
+                                                                    <h1>${user.nome ?? "Informação não existente"}</h1>
+                                                                    <p>Nome de Usuário: ${user.nomeUsuario ?? "Informação não existente"}</p>
+                                                                    <p>Bio: ${user.bio ?? "Informação não existente"}</p>
+                                                                    <p>Email: ${user.email ?? "Informação não existente"}</p>
+                                                                    <p>Número de seguidores${user.seguidores ?? "Informação não existente"}</p>
+                                                                    <p>Número de pessoas que Segue: ${user.seguindo ?? "Informação não existente"}</p>
                                                                 </div>`
-        console.log("informações add iniciado")
         if (user.repositorios.length > 0) {
-            console.log("repositorios add iniciado")
             let listaRepositorios = "";
             user.repositorios.forEach(repositorio => {
                 listaRepositorios += `<li><a href="${repositorio.html_url}" target="_blank">${repositorio.name}</li>`
