@@ -145,11 +145,34 @@ main {
 
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
-  color: #fff
 }
 
 .container .profile-data.hide{
   display: none;
+}
+
+.container .profile-data .repositories ul li a h4{
+  margin-bottom: 2px;
+  font-size: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.container .profile-data .repositories ul li a:hover h4{
+  color: #fff;
+}
+
+.container .profile-data .repositories ul li a span{
+  background-color: blueviolet;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+  transition: 0.3s ease-in-out;
+}
+
+.container .profile-data .repositories ul li a:hover span{
+  background-color: transparent;
+  color: #fff;
+  border: blueviolet 1px solid;
 }
 
 /* EVENTS */
